@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in logdb-api.gemspec
+gemspec
+
+if File.exist? File.expand_path("../../pandora-transport/pandora-transport.gemspec", __FILE__)
+  gem 'pandora-transport', :path => File.expand_path("../../pandora-transport", __FILE__), :require => false
+end
+
+if File.exist? File.expand_path("../../logdb/logdb.gemspec", __FILE__)
+  gem 'logdb', :path => File.expand_path("../../logdb", __FILE__), :require => false
+end

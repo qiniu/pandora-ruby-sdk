@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in pipeline.gemspec
+gemspec
+
+if File.exist? File.expand_path("../../pandora-transport/pandora-transport.gemspec", __FILE__)
+  gem 'pandora-transport', :path => File.expand_path("../../pandora-transport", __FILE__), :require => false
+end
+
+if File.exist? File.expand_path("../../pipeline-api/pipeline-api.gemspec", __FILE__)
+  gem 'pipeline-api', :path => File.expand_path("../../pipeline-api", __FILE__), :require => false
+end
